@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwi Ardhianto | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D241E;   /* Deep Espresso */
+            --secondary: #A68966; /* Muted Gold/Brown */
+            --bg: #F9F7F5;        /* Soft Linen */
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--primary); }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            border-bottom: 1px solid #E5E1DA;
+        }
+        .project-card:hover {
+            padding-left: 20px;
+            border-bottom-color: var(--secondary);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px;
+            bottom: -2px; left: 0; background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 mix-blend-difference px-8 py-6 flex justify-between items-center text-white">
+        <span class="font-semibold tracking-tighter text-lg uppercase">Ardhian.</span>
+        <div class="hidden md:flex space-x-12 text-xs font-medium uppercase tracking-widest">
+            <a href="#work" class="nav-link">Selected Work</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="https://wa.me/62882006897303" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center px-8 md:px-24">
+        <h2 class="text-xs uppercase tracking-[0.5em] text-[#A68966] mb-8 font-medium">Fullstack Developer & IoT Engineer</h2>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+    Crafting digital <br> experiences & systems.
+</h1>
+        </h1>
+        <div class="mt-12 flex items-center space-x-4">
+            <div class="h-[1px] w-12 bg-[#2D241E]"></div>
+            <p class="text-sm uppercase tracking-widest font-light">Based in Indonesia</p>
+        </div>
+    </section>
+<section id="about" class="px-8 md:px-24 py-24 border-t border-[#E5E1DA]">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4">
+                <h3 class="text-xs uppercase tracking-[0.5em] text-[#A68966] font-medium">About Me</h3>
+            </div>
+            <div class="md:col-span-8">
+                <p class="text-2xl md:text-3xl leading-relaxed font-light text-[#3C2A21]">
+                    Saya adalah seorang <span class="font-semibold text-[#2D241E]">Web Developer & IoT Enthusiast</span> yang berfokus pada integrasi antara perangkat keras dan solusi perangkat lunak yang efisien. 
+                </p>
+                <p class="mt-6 text-gray-500 max-w-xl leading-loose">
+                    Melalui pengalaman magang dan berbagai proyek personal, saya telah mengembangkan keahlian dalam membangun sistem monitoring real-time menggunakan Python, Django, dan teknologi IoT. Saya percaya bahwa teknologi haruslah intuitif dan memberikan dampak nyata bagi penggunanya.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="px-8 md:px-24 py-32 bg-white">
+        <div class="flex justify-between items-end mb-20">
+            <h3 class="text-4xl serif">Featured Projects</h3>
+            <span class="text-xs text-gray-400 uppercase tracking-widest">02 Projects / 2026</span>
+        </div>
+
+        <div class="space-y-0">
+            <div class="project-card py-16 flex flex-col md:flex-row md:items-center justify-between group">
+                <div class="md:w-1/2">
+                    <span class="text-[10px] uppercase tracking-widest text-[#A68966] font-bold">Magang Project</span>
+                    <h4 class="text-3xl mt-2 mb-4 font-medium">VisionGuard IoT System</h4>
+                    <p class="text-gray-500 max-w-md text-sm leading-relaxed mb-6">
+                        Pengembangan sistem keamanan cerdas menggunakan integrasi ESP32 dan OpenCV. Dashboard web dibangun dengan Django untuk manajemen data wajah dan log akses real-time.
+                    </p>
+                </div>
+                <div class="flex space-x-4 items-center">
+                    <div class="text-right hidden md:block">
+                        <p class="text-[10px] uppercase font-bold tracking-tighter">Stack</p>
+                        <p class="text-xs text-gray-400">Python, Django, IoT</p>
+                    </div>
+                    <a href="vision-guard.html" class="px-8 py-4 bg-[#2D241E] text-white text-[10px] uppercase tracking-widest font-bold hover:bg-[#A68966] transition-all duration-300">View Project Details</a>
+                </div>
+            </div>
+
+            
+    </section>
+    <section id="contact" class="px-8 md:px-24 py-32 border-t border-[#E5E1DA] bg-[#FDFBF9]">
+        <div class="max-w-4xl">
+            <h3 class="text-xs uppercase tracking-[0.5em] text-[#A68966] font-medium mb-12">Get In Touch</h3>
+            
+            <a href="https://wa.me/62882006897303?text=Halo%20Ardhian,%20saya%20tertarik%20dengan%20proyek%20Anda" target="_blank" class="group block">
+                <h2 class="text-4xl md:text-7xl font-bold tracking-tighter hover:text-[#A68966] transition-colors duration-500 italic">
+                    Order?
+                </h2>
+                <div class="h-[2px] w-0 bg-[#A68966] group-hover:w-full transition-all duration-700 mt-2"></div>
+            </a>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Socials</p>
+                    <div class="flex flex-col space-y-2 text-sm font-medium">
+                        <a href="https://github.com/ardhian26" class="hover:text-[#A68966]">github</a>
+                    
+                        <a href="https://www.instagram.com/ardhiannnn?igsh=MTE0NHQ5NGlscWFrcw%3D%3D&utm_source=qr" class="hover:text-[#A68966]">instagram</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Location</p>
+                    <p class="text-sm font-medium">Salatiga, Central Java<br>Indonesia</p>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Current Status</p>
+                    <p class="text-sm font-medium">Available for new opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="px-8 md:px-24 py-20 bg-[#2D241E] text-[#F9F7F5]">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+            <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-[#A68966] mb-4">Let's collaborate</p>
+                <h2 class="text-3xl serif">Ready to start a project?</h2>
+            </div>
+            <div class="flex space-x-8 text-xs uppercase tracking-widest font-light">
+                <a href="https://github.com/ardhian26" class="hover:text-[#A68966]">GitHub</a>
+                <a href="mailto:dwiardhianto123@gmail.com" class="hover:text-[#A68966]">Email</a>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-white/10 flex justify-between text-[10px] uppercase tracking-widest text-gray-500">
+            <p>&copy; 2026 Dwi Ardhianto</p>
+            <p>Built with Clean Code Principle</p>
+        </div>
+    </footer>
+
+</body>
+</html>

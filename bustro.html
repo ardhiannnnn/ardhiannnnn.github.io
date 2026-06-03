@@ -5,110 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI/UX Design Detail | Dwi Ardhiantho</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS untuk Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F9F7F5; color: #2D241E; }
         .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Kustomisasi Tampilan Swiper */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+        /* Mengubah warna titik navigasi slider menjadi cokelat senada portofolio */
+        .swiper-pagination-bullet-active {
+            background: #A68966 !important;
+        }
+        /* Atur jarak tombol navigasi agar tidak menabrak mockup */
+        .swiper-button-next, .swiper-button-prev {
+            color: #2D241E !important;
+            transform: scale(0.7);
+        }
     </style>
 </head>
 <body class="antialiased">
 
+    <!-- Navigasi Atas -->
     <nav class="p-8">
         <a href="index.html" class="text-xs uppercase tracking-widest flex items-center hover:text-[#A68966] transition">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
             Back to Portfolio
         </a>
     </nav>
 
     <main class="max-w-5xl mx-auto px-8 py-12">
+        <!-- Header Halaman -->
         <header class="mb-16">
             <span class="text-xs uppercase tracking-[0.5em] text-[#A68966] font-medium">Project Case Study</span>
             <h1 class="text-5xl md:text-7xl font-black tracking-tighter uppercase mt-4 mb-6 leading-none">UI/UX Design</h1>
             <p class="text-xl text-gray-500 font-light">Aplikasi Pemesanan Tiket Online</p>
         </header>
 
-   <section class="mb-16">
-    <div class="bg-[#1A1512] rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-video">
-        <iframe 
-            width="100%" 
-            height="100%" 
-            src="https://www.youtube.com/embed/qO2PwZCaQ1Q?autoplay=1&mute=1&loop=1&playlist=qO2PwZCaQ1Q" 
-            title="VisionGuard Web Demo" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
-    <p class="mt-4 text-center text-[10px] uppercase tracking-widest text-gray-400 italic">
-        Video Demo: Alur kerja dashboard VisionGuard
-    </p>
-</section>
-    
-    <div class="mt-6 p-6 bg-white border border-[#E5E1DA] rounded-2xl flex items-center gap-4">
-        <div class="p-3 bg-[#F9F7F5] rounded-full text-[#A68966]">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
-        </div>
-        <div>
-            <p class="font-semibold text-sm italic">Local Screen Recording Demo</p>
-            <p class="text-xs text-gray-500 italic">Menampilkan integrasi antara pemicu hardware dan respons dashboard web secara real-time.</p>
-        </div>
-    </div>
-</section>
+        <!-- Showcase Mockup HP dengan Slider Carousel (19 Screens) -->
+        <section class="mb-20 bg-white border border-[#E5E1DA] rounded-3xl p-8 shadow-sm">
+            <div class="text-center mb-8">
+                <h2 class="text-xl font-bold uppercase tracking-tight text-gray-900">Mobile Interface Showcases</h2>
+                <p class="text-xs text-gray-500 mt-2 italic">Geser ke kanan/kiri atau tarik untuk melihat seluruh halaman aplikasi </p>
+                <div class="h-[2px] w-12 bg-[#A68966] mx-auto mt-3"></div>
+            </div>
 
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper max-w-4xl mx-auto px-4 pb-12">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/halaman utama.jpg" class="w-full h-full object-cover" alt="Screen 1">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Logo App</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/login 1.jpg" class="w-full h-full object-cover" alt="Screen 2">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Login Page</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/USERNAME LOGIN.jpg" class="w-full h-full object-cover" alt="Screen 3">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Login page</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/pembuatan akun.jpg" class="w-full h-full object-cover" alt="Screen 4">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Pembuatan Akun</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/beranda.jpg" class="w-full h-full object-cover" alt="Screen 5">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Beranda</h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/input untuk mencari bus (1).jpg" class="w-full h-full object-cover" alt="Screen 5">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Pemesanan</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/notif pembayaran (1).jpg" class="w-full h-full object-cover" alt="Screen 5">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Notifikasi pembayaran</h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="flex flex-col items-center">
+                            <div class="relative border-[8px] border-[#2D241E] rounded-[2.5rem] overflow-hidden shadow-xl w-56 aspect-[9/19] bg-gray-100">
+                                <img src="foto/halaman tiket.jpg" class="w-full h-full object-cover" alt="Screen 5">
+                            </div>
+                            <h3 class="mt-4 font-semibold text-xs uppercase tracking-wider text-gray-700">Menu Tiket</h3>
+                        </div>
+                    </div>
+                    <!-- Catatan Tambahan: -->
+                    <!-- Silakan copy-paste struktur <div class="swiper-slide">...</div> di atas -->
+                    <!-- untuk melengkapinya dari ss6.png sampai ss19.png sesuai kebutuhanmu -->
+
+                </div>
+
+                <!-- Navigasi Tambahan Swiper -->
+                <div class="swiper-pagination !bottom-0"></div>
+                <div class="swiper-button-next hidden md:flex"></div>
+                <div class="swiper-button-prev hidden md:flex"></div>
+            </div>
+        </section>
+
+        <!-- Informasi Detail Proyek -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
             
+            <!-- Kolom Kiri: Deskripsi Konten -->
             <div class="md:col-span-8 space-y-12">
                 <section>
                     <h3 class="text-xs uppercase tracking-widest text-[#A68966] font-bold mb-4">Overview</h3>
                     <p class="leading-relaxed text-gray-600">
-                        Proyek ini dikembangkan untuk mengotomatisasi sistem keamanan lingkungan dengan memanfaatkan AI. Sistem bekerja saat sensor PIR mendeteksi gerakan, memicu ESP32-Cam untuk menangkap gambar, dan mengirimkannya ke server Django untuk diproses menggunakan OpenCV.
+                        Proyek ini berfokus pada perancangan antarmuka pengguna (UI) dan pengoptimalan alur pengalaman pengguna (UX) untuk aplikasi pemesanan tiket online berbasis Android. Menggunakan platform <strong>Kodular</strong>, tantangan utama dari pengembangan ini adalah mentransformasi alur transaksi pembelian tiket yang kaku menjadi pengalaman digital yang intuitif, bersih, dan mudah dioperasikan.
                     </p>
                 </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="p-8 bg-white border border-[#E5E1DA] rounded-2xl">
-                        <h4 class="font-bold uppercase tracking-tighter mb-2">Hardware Stack</h4>
-                        <ul class="text-sm text-gray-500 space-y-1">
-                            <li>• ESP32-Microcontroller</li>
-                            <li>• PIR Motion Sensor</li>
-                            <li>• Hikvision CCTV Integration</li>
-                            <li>• Power Management System</li>
-                        </ul>
+                <section>
+                    <h3 class="text-xs uppercase tracking-widest text-[#A68966] font-bold mb-4">Design Approach & Implementation</h3>
+                    <div class="p-8 bg-white border border-[#E5E1DA] rounded-2xl space-y-4">
+                        <div>
+                            <h4 class="font-bold uppercase tracking-tight text-sm mb-1">Visual Layouting via Kodular</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Penyusunan tata letak komponen aplikasi sepenuhnya diimplementasikan langsung menggunakan desainer visual Kodular. Memastikan penempatan tombol, kolom input, dan kartu informasi tetap proporsional.
+                            </p>
+                        </div>
+                        <hr class="border-[#E5E1DA]">
+                        <div>
+                            <h4 class="font-bold uppercase tracking-tight text-sm mb-1">UX Focus & Usability</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                Menerapkan prinsip kontras warna yang nyaman di mata, hierarki tipografi teks yang jelas, serta navigasi berbasis menu bawah (<em>bottom navigation</em>) demi mempermudah jangkauan jari pengguna saat berinteraksi secara mobile.
+                            </p>
+                        </div>
                     </div>
-                    <div class="p-8 bg-white border border-[#E5E1DA] rounded-2xl">
-                        <h4 class="font-bold uppercase tracking-tighter mb-2">Software Stack</h4>
-                        <ul class="text-sm text-gray-500 space-y-1">
-                            <li>• Python (OpenCV / AI Core)</li>
-                            <li>• Django Framework (Backend)</li>
-                            <li>• MySQL (Database)</li>
-                            <li>• Tailwind CSS (Dashboard UI)</li>
-                        </ul>
-                    </div>
-                </div>
+                </section>
             </div>
 
+            <!-- Kolom Kanan: Meta Data Proyek -->
             <div class="md:col-span-4 space-y-8">
                 <div>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Links</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-4">Project Action</p>
                     <div class="flex flex-col space-y-3">
-                        <a href="https://github.com/ardhiannnnn/iot-face-recognition" target="_blank" class="px-6 py-3 bg-[#2D241E] text-white text-[10px] uppercase tracking-widest font-bold text-center hover:bg-[#A68966] transition">Source Code</a>
-                        <a href="https://docs.google.com/document/d/18QH8GE4ESXBsx71o4CFcMG0bIaGKvsP-w9IFBZIN1zU/edit?usp=sharing" class="px-6 py-3 border border-[#2D241E] text-[10px] uppercase tracking-widest font-bold text-center hover:bg-[#2D241E] hover:text-white transition">Download Report (PDF)</a>
+                        <a href="https://probable-lycra-4fb.notion.site/Laporan-Dokumentasi-Project-Integrasi-Sistem-2ca7714de67980ccbd35ce83a3db50dc?source=copy_link" target="_blank" class="px-6 py-3 bg-[#2D241E] text-white text-[10px] uppercase tracking-widest font-bold text-center hover:bg-[#A68966] transition">
+                            Download APK / AIA File
+                        </a>
                     </div>
                 </div>
                 <div>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Role</p>
-                    <p class="text-sm font-medium">IoT Developer & Backend Engineer</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Role Assignment</p>
+                    <p class="text-sm font-medium text-gray-800">UI/UX Designer & Mobile Frontend Developer</p>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="py-20 text-center">
         <div class="h-[1px] w-20 bg-[#A68966] mx-auto mb-8"></div>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400">&copy; 2026 VisionGuard Project</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400">&copy; 2026 UI/UX Portfolio Project</p>
     </footer>
 
+    <!-- Swiper JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Inisialisasi Logika Swiper Slider -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,         // Di HP hanya tampil 1 mockup agar lapang
+            spaceBetween: 20,         // Jarak antar slide gambar
+            grabCursor: true,         // Mengubah kursor mouse jadi icon tangan narik
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,      // Titik navigasi bawah bisa diklik manual
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2, // Di Tablet tampil 2 mockup sekaligus
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 3, // Di Desktop/Laptop tampil 3 mockup sejajar
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
 </body>
+</html>
